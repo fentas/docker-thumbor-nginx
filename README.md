@@ -7,7 +7,7 @@ see https://github.com/APSL/docker-thumbor
 `docker-compose` example
 ```yml
 thumbor-upload:
-  image: thumbor-nginx:latest
+  image: fentas/thumbor-nginx:latest
   stdin_open: true
   tty: true
   restart: always
