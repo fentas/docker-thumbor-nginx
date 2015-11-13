@@ -21,9 +21,9 @@ thumbor-upload:
     UPLOAD_ENABLED: "True"
     UPLOAD_PUT_ALLOWED: "True"
     NGINX_RESTRICT: |
-      allow 88.198.116.119;
-      allow 148.251.54.238;
-      allow 148.251.82.54;
+      allow 88.198.23.1;
+      allow 132.2.54.238;
+      allow 132.43.82.54;
       deny all;
   volumes:
     - /data/storage/:/data/storage/:rw
