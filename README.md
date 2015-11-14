@@ -21,10 +21,14 @@ thumbor-upload:
     UPLOAD_ENABLED: "True"
     UPLOAD_PUT_ALLOWED: "True"
     NGINX_RESTRICT: |
+      satisfy: any;
       allow 88.198.23.1;
-      allow 132.2.54.238;
       allow 132.43.82.54;
       deny all;
+      auth_basic "closed site";
+      auth_basic_user_file htpasswd;
+    NGINX_HTPASSWD: |
+      foobar:$apr1$lODy4yH.$bzpAPiUdPYVShoJ602X341
   volumes:
     - /data/storage/:/data/storage/:rw
 ```

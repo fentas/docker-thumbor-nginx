@@ -25,7 +25,8 @@ EXPOSE 80 443 8000
 ENV NGINX_RESTRICT ""
 RUN \
   mkdir -p /etc/nginx/includes && \
-  touch /etc/nginx/includes/nginx-restrict
+  touch /etc/nginx/includes/nginx-restrict && \
+  touch /etc/nginx/htpasswd
 
 ADD docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
